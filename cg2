@@ -1,0 +1,33 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("CG2 troll gui", "DarkTheme")
+local Tab = Window:NewTab("Player stuff")
+local Section = Tab:NewSection("Player stuff")
+Section:NewSlider("Speed", "Yourdad", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("Jump", "mom", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+Section:NewSlider("HipHeight", "SliderInfo", 500, 2, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.HipHeight = s
+end)
+
+local Tab = Window:NewTab("CG2")
+
+local Section = Tab:NewSection("tpa")
+
+Section:NewButton("Spawn", "ButtonInfo", function()
+    game:GetService("ReplicatedStorage").RemoteFunctions.WorldService.TeleportToWorld:InvokeServer("Spawn");
+    print("Teleported")
+end)
+
+Section:NewButton("Enchant Npc", "ButtonInfo", function()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-199, 962, -3438)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+end)
