@@ -24,7 +24,7 @@ local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 local location = CFrame.new(-3411, 877, -1772)
 local humanoid = game.Players.LocalPlayer.Character.Humanoid
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-wait(0.1)
+wait(0.5)
 pl.CFrame = location
 end)
 
@@ -34,6 +34,36 @@ local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 local location = CFrame.new(-199, 962, -3438)
 local humanoid = game.Players.LocalPlayer.Character.Humanoid
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-wait(0.1)
+wait(0.5)
+pl.CFrame = location
+end)
+
+Section:NewButton("Assasins Desert", "ButtonInfo", function()
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-2372, 771, -3385)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.5)
+pl.CFrame = location
+end)
+
+Section:NewButton("Assasins Tundra", "ButtonInfo", function()
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(2878, 786, -3328)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.5)
+pl.CFrame = location
+end)
+
+Section:NewButton("CK??? tundra", "ButtonInfo", function()
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(2133, 1002, -4537)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.5)
 pl.CFrame = location
 end)
