@@ -18,12 +18,18 @@ local Tab = Window:NewTab("CG2")
 
 local Section = Tab:NewSection("tpa")
 
-Section:NewButton("Spawn", "ButtonInfo", function()
-    game:GetService("ReplicatedStorage").RemoteFunctions.WorldService.TeleportToWorld:InvokeServer("Spawn");
-    print("Teleported")
+Section:NewButton("Corrupted Mages", "ButtonInfo", function()
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-3411, 877, -1772)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
 end)
 
 Section:NewButton("Enchant Npc", "ButtonInfo", function()
+
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 local location = CFrame.new(-199, 962, -3438)
 local humanoid = game.Players.LocalPlayer.Character.Humanoid
